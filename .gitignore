@@ -1,0 +1,9 @@
+# Build output
+probe/zig-out/
+probe/.zig-cache/
+
+# iperf3 binaries are built locally, not stored in the repository
+probe/iperf3-linux-static/iperf3-linux-x86_64
+probe/iperf3-linux-static/iperf-*.tar.gz
+probe/iperf3-linux-static/iperf-*/
+probe/iperf3-win-patch/iperf3.exe

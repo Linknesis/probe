@@ -1,0 +1,59 @@
+Linknesis Probe - Source-Available License
+
+Copyright (c) 2026 Linknesis. All rights reserved.
+
+1. Purpose
+
+   The source code in this repository is published for transparency and
+   security review. It corresponds to the official Linknesis Probe releases;
+   each release is tagged with its version number.
+
+2. What you may do
+
+   a) Read and audit the source code.
+
+   b) Compile the source code, unmodified, for example to verify that it
+      corresponds to the official Linknesis Probe releases.
+
+   c) Run Probe binaries that you compiled from this repository, unmodified,
+      with a Linknesis Core licensed to you, under the same terms that apply
+      to the official Probe binaries.
+
+   d) Report security issues and, after responsible disclosure as described
+      in SECURITY.md, publish your findings.
+
+3. What you may not do
+
+   No other license is granted. You may not modify, adapt, translate,
+   redistribute, sublicense, sell or publish this source code or binaries
+   built from it, in whole or in part, and you may not use it in any other
+   product or with any software other than a licensed Linknesis Core.
+
+   Copies created with GitHub's fork feature, as permitted by the GitHub
+   Terms of Service, do not grant any further rights.
+
+4. Linknesis Terms of Service
+
+   Use of the Linknesis Probe is governed by the Linknesis Terms of Service
+   (https://www.linknesis.com/terms.html), including its disclaimers of
+   warranty and limitations of liability. The source code is provided "as
+   is", without warranty of any kind.
+
+5. Third-party components
+
+   This repository contains, and the Probe uses, third-party components that
+   are licensed under their own terms, listed in probe/LICENSE-THIRD-PARTY.txt
+   and probe/iperf3_license.txt (including iperf3, BSD 3-Clause, and the
+   files in probe/iperf3-win-patch/ derived from it, and the Zig standard
+   library, MIT, from which probe/src/tls_client.zig is derived). Nothing in
+   this license limits the rights those licenses grant you for those
+   components.
+
+6. Termination
+
+   Your rights under this license end automatically if you do not comply
+   with it.
+
+7. Contributions
+
+   This repository does not accept contributions.

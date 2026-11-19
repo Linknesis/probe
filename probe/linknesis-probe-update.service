@@ -1,0 +1,22 @@
+[Unit]
+Description=Linknesis Probe Updater
+After=network-online.target
+Wants=network-online.target
+
+# The update runs as the same unprivileged account as the probe service
+# itself (exactly like the probe's own automatic self-update): that account
+# owns the install directory and the probe's lock file.
+[Service]
+Type=oneshot
+User=linknesis
+Group=linknesis
+NoNewPrivileges=yes
+# '+' runs these two with full privileges despite User=. ExecStopPost (not
+# ExecStartPost) so the probe is started again even when the update fails --
+# with ExecStartPost a failed update left the probe stopped.
+ExecStartPre=+-/usr/bin/systemctl stop linknesis-probe.service
+ExecStart=/opt/linknesis/probe/linknesis-probe --update
+ExecStopPost=+-/usr/bin/systemctl --no-block start linknesis-probe.service
+# A oneshot unit has no start timeout by default; an unreachable Core must
+# not leave the update (and the stopped probe) hanging indefinitely.
+TimeoutStartSec=300
